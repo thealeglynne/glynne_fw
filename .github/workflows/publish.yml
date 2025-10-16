@@ -1,0 +1,43 @@
+# .github/workflows/publish.yml
+name: Publish Python Package to PyPI
+
+# Evento que dispara este workflow: se ejecuta cuando se crea un nuevo 'release' (etiqueta)
+on:
+  release:
+    types: [published]
+
+# Define el entorno de despliegue que configuraste en PyPI (por ejemplo, 'pypi')
+# Si no usaste un entorno en PyPI, puedes borrar esta línea.
+# environment: pypi 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    # Esto configura el permiso para usar OIDC con PyPI
+    permissions:
+      id-token: write # Permite que GitHub solicite el token OIDC
+      contents: read # Permite leer el código fuente
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine
+    
+    - name: Build sdist and wheel
+      run: python -m build
+      
+    # ----------------------------------------------------
+    # Paso CLAVE: Sube a PyPI usando OIDC (el método moderno)
+    # ----------------------------------------------------
+    - name: Publish package to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
