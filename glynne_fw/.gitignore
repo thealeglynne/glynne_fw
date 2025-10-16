@@ -1,0 +1,65 @@
+# =========================
+# Archivos y carpetas de Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.manifest
+*.spec
+
+# =========================
+# Entornos virtuales
+# =========================
+venv/
+env/
+ENV/
+.venv/
+.idea/
+.vscode/
+
+# =========================
+# Archivos de sistema
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs y cachés
+# =========================
+*.log
+*.pot
+*.pyc
+*.pkl
+*.cache
+.cache/
+.mypy_cache/
+.pytest_cache/
+coverage/
+htmlcov/
+__snapshots__/
+
+# =========================
+# Archivos temporales
+# =========================
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# =========================
+# Archivos de despliegue
+# =========================
+dist/
+build/
+*.tar.gz
+*.whl
+
+# =========================
+# ⚠️ IMPORTANTE
+# =========================
+# No ignorar el archivo .env (se subirá)
+# !.env

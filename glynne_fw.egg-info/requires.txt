@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+langchain
+langchain-groq
+langchain-core
+python-dotenv
+pydantic
+httpx
+requests
+tqdm
+tenacity

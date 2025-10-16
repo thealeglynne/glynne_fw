@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+glynne_fw/__init__.py
+glynne_fw/main.py
+glynne_fw/requirements.txt
+glynne_fw.egg-info/PKG-INFO
+glynne_fw.egg-info/SOURCES.txt
+glynne_fw.egg-info/dependency_links.txt
+glynne_fw.egg-info/entry_points.txt
+glynne_fw.egg-info/requires.txt
+glynne_fw.egg-info/top_level.txt
+glynne_fw/agent1/__init__.py
+glynne_fw/agent1/chat.py

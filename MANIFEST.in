@@ -1,0 +1,7 @@
+# MANIFEST.in
+recursive-include glynne_fw *
+include README.md
+
+exclude glynne_fw/.env
+exclude glynne_fw/.gitignore
+

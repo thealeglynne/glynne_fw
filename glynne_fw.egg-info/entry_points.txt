@@ -1,0 +1,2 @@
+[console_scripts]
+glynne-fw = glynne_fw.main:run
